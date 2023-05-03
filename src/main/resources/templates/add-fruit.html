@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Fruit</title>
+</head>
+<body>
+<h1>Add Fruit</h1>
+<form   th:action="@{/add-fruit}" th:object="${fruit}" method="post">
+    <label for="name">Fruit name:</label>
+    <input type="text" id="name" name="name" th:field="*{name}" />
+    <button type="submit">Add Fruit</button>
+</form>
+</body>
+</html>

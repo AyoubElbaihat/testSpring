@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Fruit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>List Fruit</h1>
+<ul>
+    <li><a href="/add-fruit">Add Fruit</a></li>
+    <li th:each="fruit : ${fruitList}">
+        <a th:href="@{/fruit/{id}(id=${fruit.id})}"><span th:text="${fruit.name}" /></a>
+    </li>
+</ul>
+</body>
+</html>
